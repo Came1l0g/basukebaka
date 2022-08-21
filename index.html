@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css">
+    <link rel="stylesheet" href="/scss/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>バスケバカ！</h1>
+        <ul>
+            <li><a href="">イベント一覧</a></li>
+            <li><a href="">バスケショップ</a></li>
+            <li><a href="">人気コート</a></li>
+            <li><a href="">野外コートを追加！！！</a></li>
+            <li><a href="">開発中</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="formarea">
+            <h2>近場のコートを探してみよう！</h2>
+            <form action="" method="POST">
+                <div class="prefectures">
+                    <label for="prefe">都道府県を選択</label>
+                    <select name="prefe" id="prefe">
+                        <option value="">選択してください</option>
+                    </select>
+                </div>
+                <div class="municipalities">
+                    <label for="munici">市区町村を選択</label>
+                    <select name="munici" id="munici">
+                        <option value="">選択してください</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <div class="court">
+            <p>ーーーーーーー都道府県が選択されたら表示する ーーーーーーーーー</p>
+            <h3 class="court_name">場所の名前</h3>
+            <p class="court_popularity">人気度</p>
+            <p class="court_image">コート画像</p>
+            <p>ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー</p>
+        </div>
+    </main>
+
+    <footer>
+        <small>&copy; バスケバカ！！！</small>
+    </footer>
+</body>
+
+</html>
