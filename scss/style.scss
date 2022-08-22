@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+$main-font-size: 1.4rem;
+body{
+    font-size: 100%;
+    background-color: #fff4ea;
+}
+img{
+    box-sizing: border-box;
+    vertical-align: bottom;
+}
+a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.header{
+    margin-bottom: 50px;
+    .title{
+        font-size: 3.5rem;
+        height: 100px;
+        line-height: 100px;
+        margin-bottom: 10px;
+        padding-left: 50px;
+    }
+    .nav>ul{
+        font-size: $main-font-size;
+        display: flex;
+        justify-content: space-around;
+        height: 50px;
+
+        li{
+            border-left: solid 2px #ffce9e;
+            border-right: solid 2px #ffce9e;
+            width: 250px;
+            text-align: center;
+            line-height: 50px;
+            a{
+                background-color: #ffead6;
+            }
+        }
+    }
+    
+}
+
+.main{
+    max-width: 1200px;
+    margin: 0 auto;
+    .formarea >  h2{
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+    }
+    
+    .fromFlex{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin-bottom: 40px;
+
+        .prefectures{
+            background-color: #ffd3a8;
+            height: 50px;
+            width: 25%;
+            
+            #prefe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .municipalities{
+            background-color: #ffd3a8;
+            height: 50px;
+            width: 25%;
+            #munici{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    #btn{
+        background-color: red;
+        text-align: center;
+        border-radius: 10px;
+        display: block;
+        height: 30px;
+        width: 200px;
+        margin: 0 auto;
+    }
+}

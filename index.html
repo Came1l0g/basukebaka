@@ -6,39 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css">
-    <link rel="stylesheet" href="/scss/index.css">
+    <link rel="stylesheet" href="/scss/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <h1>バスケバカ！</h1>
-        <ul>
-            <li><a href="">イベント一覧</a></li>
-            <li><a href="">バスケショップ</a></li>
-            <li><a href="">人気コート</a></li>
-            <li><a href="">野外コートを追加！！！</a></li>
-            <li><a href="">開発中</a></li>
-        </ul>
+    <header class="header">
+        <h1 class="title">バスケバカ！</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="">イベント一覧</a></li>
+                <li><a href="">バスケショップ</a></li>
+                <li><a href="">人気コート</a></li>
+                <li><a href="">コートを追加！</a></li>
+                <li><a href="">開発中</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
+    <main class="main">
         <div class="formarea">
             <h2>近場のコートを探してみよう！</h2>
             <form action="" method="POST">
-                <div class="prefectures">
-                    <label for="prefe">都道府県を選択</label>
-                    <select name="prefe" id="prefe">
-                        <option value="">選択してください</option>
-                    </select>
+                <div class="fromFlex">
+                    <div class="prefectures">
+                        <select name="prefe" id="prefe">
+                            <option value="">都道府県を選択</option>
+                            <option value="1">っっｆ</option>
+                            <option value="2">ｄｓ</option>
+                            <option value="3">４４</option>
+                        </select>
+                    </div>
+
+                    <div class="municipalities">
+                        <select name="munici" id="munici">
+                            <option value="">市区町村を選択</option>
+                            <option value="">てｓｔ</option>
+                            <option value="">ｆｓｄｆ</option>
+                            <option value="">市ｆｓｄ区町村を選択</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="municipalities">
-                    <label for="munici">市区町村を選択</label>
-                    <select name="munici" id="munici">
-                        <option value="">選択してください</option>
-                    </select>
-                </div>
-                <input type="submit" value="コートを探す">
+
+                <input type="submit" value="コートを探す" id="btn">
             </form>
         </div>
 
