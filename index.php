@@ -1,3 +1,11 @@
+<?php
+
+    require_once ("php/dbc.php");
+    $test = getparam();
+    echo "<pre>";
+    echo"</pre>";
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -18,16 +26,18 @@
                 <li><a href="">イベント一覧</a></li>
                 <li><a href="">バスケショップ</a></li>
                 <li><a href="">人気コート</a></li>
-                <li><a href="">コートを追加！</a></li>
+                <li><a href="./coat_addition.php">コートを追加！</a></li>
                 <li><a href="">開発中</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="main">
+
+
         <div class="formarea">
-            <h2>近場のコートを探してみよう！</h2>
-            <form action="./" method="POST">
+            <h2 id="title">近場のコートを探してみよう！</h2>
+            <form action="php/coatselect.php" method="GET">
                 <div class="fromFlex">
                     <div class="prefectures">
                         <select name="prefe" id="prefe">
@@ -42,15 +52,25 @@
                     </div>
                 </div>
 
-                <input type="submit" value="コートを探す" id="btn">
+                <input type="submit" value="コートを探す" id="btn" >
             </form>
         </div>
 
         <div class="court">
+            <h2>【最近追加されたコート】</h2>
+            <ul>
+                <?php foreach($test as $item) : ?>
+                <li>
+                    <img src=<?php echo $item["image_path"]; ?> alt="">
+                </li>
+                <p><?php echo $item["coat_name"] ?></p>
+                <?php endforeach ?>
+            </ul>
             <p>ーーーーーーー都道府県が選択されたら表示する ーーーーーーーーー</p>
             <h3 class="court_name">場所の名前</h3>
             <p class="court_popularity">人気度</p>
             <p class="court_image">コート画像</p>
+            
             <p>ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー</p>
         </div>
     </main>
@@ -61,6 +81,7 @@
 
     <script src="./js/prefectures.js"></script>
     <script src="./js/func.js"></script>
+    <script src="./js/ajax.js"></script>
 </body>
 
 </html>
